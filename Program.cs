@@ -4,7 +4,20 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            #region  Person Object Initializer
+            Person p = new Person
+            {
+                FirstName = "John",
+                LastName = "Doe",
+                Age = 30,
+                Address = new Address
+                {
+                    City = "New York",
+                    Street = "5th Avenue"
+                }
+            };
+            Console.WriteLine(p);
+            #endregion
         }
     }
 }
