@@ -20,13 +20,27 @@
             #endregion
 
             #region Rectangle with Auto Properties
-            Rectangle r = new Rectangle(1)
-            {
-                Width = 15,
-                Height = 10,
-                Color = "Red",
-            };
-            Console.WriteLine(r);
+            //Rectangle r = new Rectangle(1)
+            //{
+            //    Width = 15,
+            //    Height = 10,
+            //    Color = "Red",
+            //};
+            //Console.WriteLine(r);
+            #endregion
+
+            #region Student Gradebook Indexer
+            /// Gradebook g = new Gradebook(5);
+            /// g[0]= 85.5;
+            /// g[1]= 90.0;
+            /// g[2]= 78.0;
+            /// g[3]= 92.5;
+            /// g[4]= 88.0;
+            /// g[5]= 95.0; // This will throw an exception since the index is out of range
+            /// لو انا بقا هعوز الف عليهم ب (for each) فانا لازم اعمل (implent IEnumrable) عشان جواها (method GetEnumrator) دي البتخليني اعرف الف ب for each
+            /// Console.WriteLine($"Grade 1: {g[0]}");
+            /// Console.WriteLine($"Grade 2: {g[1]}");
+            /// Console.WriteLine($"Grade 3: {g[2]}");
             #endregion
         }
     }
