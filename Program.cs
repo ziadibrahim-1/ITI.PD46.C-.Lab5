@@ -42,6 +42,16 @@
             /// Console.WriteLine($"Grade 2: {g[1]}");
             /// Console.WriteLine($"Grade 3: {g[2]}");
             #endregion
+
+            #region String Collection Indexer
+            StringCollection Indexr = new StringCollection();
+            Indexr[0] = "First";
+            Indexr[1] = "Second";
+            Console.WriteLine(Indexr[0]);
+            Indexr["Server"]= "localhost";
+            Indexr["Port"] = "8080";
+            Console.WriteLine(Indexr["Server"]);
+            #endregion
         }
     }
 }
