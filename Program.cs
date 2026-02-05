@@ -54,15 +54,50 @@
             #endregion
 
             #region Shopping Cart with ArrayList
-            ShopingCart cart = new ShopingCart();
-            cart.AddItem("Apple");
-            cart.AddItem(1);
-            cart.AddItem(3.14);
-            cart.AddItem(DateTime.Now);
-            cart.DisplayItems();
-            cart.ReverseItems();
-            Console.WriteLine("---------------------------");
-            cart.DisplayItems();
+            ///ShopingCart cart = new ShopingCart();
+            ///cart.AddItem("Apple");
+            ///cart.AddItem(1);
+            ///cart.AddItem(3.14);
+            ///cart.AddItem(DateTime.Now);
+            ///cart.DisplayItems();
+            ///cart.ReverseItems();
+            ///Console.WriteLine("---------------------------");
+            ///cart.DisplayItems();
+            #endregion
+
+            #region Generic Student List
+            var student = new List<Student>
+            {
+                new Student { Id = 1, Name = "Alice", GPA = 3.7 },
+                new Student { Id = 2, Name = "Bob", GPA= 4 },
+                new Student { Id = 3, Name = "Charlie", GPA = 2.2 },
+                new Student { Id = 4, Name = "David", GPA = 3.0 },
+                new Student { Id = 5, Name = "Eve", GPA = 3.9 },
+                new Student { Id = 6, Name = "Frank", GPA = 2.5 },
+            };
+            //foreach (var s in student)
+            //{
+            //    Console.WriteLine(s);
+            //}
+            //var student2 = student.Find(x => x.Id == 1);
+            //var student2 = student.FirstOrDefault(x => x.Id == 15);
+
+            //List<Student> student2 = student.FindAll(x => x.GPA > 3.5);
+
+            //foreach (var s in student2)
+            //{
+            //    Console.WriteLine(s);
+            //}
+            
+            //Sort
+
+            //student.Sort((a,b) =>b.GPA.CompareTo(a.GPA));
+            //foreach (var s in student)
+            //{
+            //    Console.WriteLine(s);
+            //}
+
+            //Console.WriteLine(student2);
             #endregion
         }
     }
