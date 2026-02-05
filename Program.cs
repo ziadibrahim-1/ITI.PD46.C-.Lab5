@@ -66,15 +66,16 @@
             #endregion
 
             #region Generic Student List
-            var student = new List<Student>
-            {
-                new Student { Id = 1, Name = "Alice", GPA = 3.7 },
-                new Student { Id = 2, Name = "Bob", GPA= 4 },
-                new Student { Id = 3, Name = "Charlie", GPA = 2.2 },
-                new Student { Id = 4, Name = "David", GPA = 3.0 },
-                new Student { Id = 5, Name = "Eve", GPA = 3.9 },
-                new Student { Id = 6, Name = "Frank", GPA = 2.5 },
-            };
+
+            ///var student = new List<Student>
+            ///{
+            ///    new Student { Id = 1, Name = "Alice", GPA = 3.7 },
+            ///    new Student { Id = 2, Name = "Bob", GPA= 4 },
+            ///    new Student { Id = 3, Name = "Charlie", GPA = 2.2 },
+            ///    new Student { Id = 4, Name = "David", GPA = 3.0 },
+            ///    new Student { Id = 5, Name = "Eve", GPA = 3.9 },
+            ///    new Student { Id = 6, Name = "Frank", GPA = 2.5 },
+            ///};
             //foreach (var s in student)
             //{
             //    Console.WriteLine(s);
@@ -88,7 +89,7 @@
             //{
             //    Console.WriteLine(s);
             //}
-            
+
             //Sort
 
             //student.Sort((a,b) =>b.GPA.CompareTo(a.GPA));
@@ -98,6 +99,30 @@
             //}
 
             //Console.WriteLine(student2);
+            #endregion
+
+            #region Calculator with Exceptions
+            try
+            {
+                Console.Write("Enter first number: ");
+                int input1 = int.Parse(Console.ReadLine());
+                Console.Write("Enter second number: ");
+                int input2 = int.Parse(Console.ReadLine());
+                double result = Calculator.Divide(input1, input2);
+                Console.Write(result);
+            }
+            catch (DivideByZeroException ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"An unexpected error occurred: {ex.Message}");
+            }
             #endregion
         }
     }
