@@ -44,13 +44,25 @@
             #endregion
 
             #region String Collection Indexer
-            StringCollection Indexr = new StringCollection();
-            Indexr[0] = "First";
-            Indexr[1] = "Second";
-            Console.WriteLine(Indexr[0]);
-            Indexr["Server"]= "localhost";
-            Indexr["Port"] = "8080";
-            Console.WriteLine(Indexr["Server"]);
+            ///StringCollection Indexr = new StringCollection();
+            ///Indexr[0] = "First";
+            ///Indexr[1] = "Second";
+            ///Console.WriteLine(Indexr[0]);
+            ///Indexr["Server"]= "localhost";
+            ///Indexr["Port"] = "8080";
+            ///Console.WriteLine(Indexr["Server"]);
+            #endregion
+
+            #region Shopping Cart with ArrayList
+            ShopingCart cart = new ShopingCart();
+            cart.AddItem("Apple");
+            cart.AddItem(1);
+            cart.AddItem(3.14);
+            cart.AddItem(DateTime.Now);
+            cart.DisplayItems();
+            cart.ReverseItems();
+            Console.WriteLine("---------------------------");
+            cart.DisplayItems();
             #endregion
         }
     }
