@@ -102,27 +102,47 @@
             #endregion
 
             #region Calculator with Exceptions
+            ///try
+            ///{
+            ///    Console.Write("Enter first number: ");
+            ///    int input1 = int.Parse(Console.ReadLine());
+            ///    Console.Write("Enter second number: ");
+            ///    int input2 = int.Parse(Console.ReadLine());
+            ///    double result = Calculator.Divide(input1, input2);
+            ///    Console.Write(result);
+            ///}
+            ///catch (DivideByZeroException ex)
+            ///{
+            ///    Console.WriteLine($"Error: {ex.Message}");
+            ///}
+            ///catch (FormatException ex)
+            ///{
+            ///    Console.WriteLine($"Error: {ex.Message}");
+            ///}
+            ///catch (Exception ex)
+            ///{
+            ///    Console.WriteLine($"An unexpected error occurred: {ex.Message}");
+            ///}
+            #endregion
+
+            #region File Processor with Finally
+            ResourceFile file = new ResourceFile("hamada.txt");
             try
             {
-                Console.Write("Enter first number: ");
-                int input1 = int.Parse(Console.ReadLine());
-                Console.Write("Enter second number: ");
-                int input2 = int.Parse(Console.ReadLine());
-                double result = Calculator.Divide(input1, input2);
-                Console.Write(result);
-            }
-            catch (DivideByZeroException ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-            }
-            catch (FormatException ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
+                file.Open();
+                string content = file.Read();
+                //throw new Exception("Simulated error while opening the file.");
+                Console.WriteLine(content);
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"An unexpected error occurred: {ex.Message}");
+                Console.WriteLine($"Error: {ex.Message}");
             }
+            finally
+            {
+                file.Close();
+            }
+
             #endregion
         }
     }
